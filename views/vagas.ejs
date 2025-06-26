@@ -1,0 +1,41 @@
+<!-- Declaração do tipo de documento HTML5 -->
+<!DOCTYPE html>
+
+<!-- Tag de abertura do documento HTML -->
+<html>
+
+  <!-- Cabeçalho da página (não aparece na tela, só configurações) -->
+  <head>
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Vagas</title>
+
+  </head>
+
+  <!-- Corpo da página (tudo que aparece na tela) -->
+  <body>
+    <!-- Título principal da página -->
+    <h1>Lista de Vagas</h1>
+
+    <!-- Lista não ordenada (com bolinhas) -->
+    <ul>
+
+      <!-- Loop EJS: para cada vaga no array de vagas, executa o código dentro -->
+      <% vagas.forEach(vaga => { %>
+
+       <!-- Item da lista mostrando os dados da vaga atual -->
+       <li>
+
+          <!-- Exibe o título e empresa da vaga (EJS interpreta as variáveis) -->
+          <%= vaga.titulo %> – <%= vaga.empresa %>
+
+       </li>
+
+      <!-- Fecha o loop EJS -->
+      <% }) %>
+    </ul>
+
+  <!-- Fecha o corpo da página -->
+  </body>
+<!-- Fecha o documento HTML -->
+</html>
